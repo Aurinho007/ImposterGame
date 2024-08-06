@@ -1,7 +1,7 @@
 let players = [];
 let currentPlayerIndex = 0;
 let impostorIndex = 0;
-const words = ["mesa", "cadeira", "livro", "caneta", "computador", "janela"];
+const words = ["mesa", "cadeira", "livro", "caneta", "computador", "janela", "bicicleta", "moto", "carro", "caracol", "chave", "geladeira", "blusa/camisa", "maçã", "caveira", "livro", "bússola"];
 let chosenWord = "";
 
 function addPlayer() {
