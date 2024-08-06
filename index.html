@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Impostor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo do Impostor</h1>
+
+        <div id="player-form">
+            <input type="text" id="player-name" placeholder="Digite o nome do jogador">
+            <button style="background-color: transparent; border: solid 2px #007bff; color: #007bff;" onclick="addPlayer()">Adicionar Jogador</button>
+        </div>
+
+        <div id="players-list"></div>
+        <button id="start-game-btn" onclick="startGame()">Iniciar Jogo</button>
+
+        <div id="game-area" class="hidden">
+            <h2 id="current-player"></h2>
+            <p id="display-word"></p>
+            <button id="reveal-word-btn" onclick="revealWord()">Revelar Palavra</button>
+            <button id="next-player-btn" class="hidden" onclick="nextPlayer()">Próximo Jogador</button>
+          </div>
+          <button id="restart-btn" class="hidden" onclick="reset()">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
