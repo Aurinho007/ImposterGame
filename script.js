@@ -1,8 +1,18 @@
-let players = [];
+let players = []
 let currentPlayerIndex = 0;
 let impostorIndex = 0;
 const words = ["mesa", "cadeira", "livro", "caneta", "computador", "janela", "bicicleta", "moto", "carro", "caracol", "chave", "geladeira", "blusa/camisa", "maçã", "caveira", "livro", "bússola"];
 let chosenWord = "";
+
+const savedPLayersKey = "@PLAYERS"
+const savedPLayers = sessionStorage.getItem(savedPLayersKey)
+
+if (savedPLayers) {
+  players = JSON.parse(savedPLayers);
+
+  document.getElementById("players-list").innerHTML += players.map(item => `<p>${item}</p>`).join('');
+}
+
 
 function addPlayer() {
   const playerName = document.getElementById("player-name").value;
@@ -19,6 +29,8 @@ function startGame() {
     alert("Adicione pelo menos 3 jogadores.");
     return;
   }
+
+  sessionStorage.setItem(savedPLayersKey, JSON.stringify(players));
 
   impostorIndex = Math.floor(Math.random() * players.length);
   chosenWord = words[Math.floor(Math.random() * words.length)];
