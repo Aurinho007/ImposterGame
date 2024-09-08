@@ -2,7 +2,7 @@ let players = []
 let currentPlayerIndex = 0;
 let impostorIndex = 0;
 // const words = ["mesa", "cadeira", "livro", "caneta", "computador", "janela", "bicicleta", "moto", "carro", "caracol", "chave", "geladeira", "blusa/camisa", "maçã", "caveira", "livro", "bússola"];
-const words = ["Colegio Militar", "apartamento", "rodoviaria", "bar so bora", "Aeroporto", "loja de moto", "patio brasil", "casa da Amanda", "chapada"];
+const words = ["puteiro", "apartamento", "rodoviaria", "bar so bora", "Aeroporto", "loja de moto", "clinica de aborto", "cracolandia", "boca"];
 let chosenWord = "";
 
 const savedPLayersKey = "@PLAYERS"
